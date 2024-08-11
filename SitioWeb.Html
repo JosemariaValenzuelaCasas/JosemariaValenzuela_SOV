@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valle Grande</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #053a5e;
+            color: #fff;
+        }
+
+        .logoContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoImg {
+            width: 50px; 
+            height: auto;
+            margin-right: 10px; 
+        }
+
+        .logoText {
+            font-size: 24px;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        .roundedButton {
+            background-color: #08568A;
+            color: #fff;
+            border: none;
+            padding: 20px 30px;
+            margin-left: 15px;
+            border-radius: 15px; 
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .roundedButton:hover {
+            background-color: #08568A;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 800px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image {
+            position: absolute;
+            width: 80%; 
+            height: 100%;
+            background: url('https://vallegrande.edu.pe/wp-content/uploads/2023/11/notinov.png') no-repeat center center;
+            background-size: cover;
+            z-index: 1; 
+        }
+
+        
+        .left-block, .right-block {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 10%; 
+            background-color: #08568A; 
+            z-index: 0; 
+        }
+
+        .left-block {
+            left: 0;
+        }
+
+        .right-block {
+            right: 0;
+        }
+
+        
+        .mainTitle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 48px; 
+            font-weight: bold; 
+            color: rgba(255, 255, 255, 0.9); 
+            padding: 0 20px; 
+            background: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px; 
+            z-index: 2; 
+        }
+
+        .contentSection {
+            padding: 20px;
+            text-align: left;
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+
+        .subtitle {
+            font-size: 28px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        }
+
+        .parrafo {
+            font-size: 18px; 
+            margin-bottom: 40px; 
+        }
+
+        .ImageButtonContainer {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
+        .sideImage {
+            width: 200px; 
+            height: auto;
+            flex-shrink: 0; 
+            z-index: 1; 
+        }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: flex-start; 
+            flex-shrink: 0; 
+            position: absolute;
+            bottom: 10px; 
+            left: 10px; 
+            z-index: 1; 
+        }
+
+        .roundedButton2 {
+            background-color: #08568A;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .roundedButton2:hover {
+            background-color: #063d6e;
+        }
+
+        .subtopic-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px; 
+        }
+
+        .subtopic {
+            width: 48%; 
+        }
+
+        .linkSubtitle {
+            font-size: 28px;
+            font-weight: bold;
+            color: #08568A; 
+            text-decoration: none; 
+            display: block;
+            margin-bottom: 20px; 
+        }
+
+        .linkSubtitle:hover {
+            text-decoration: underline; 
+        }
+
+        .centeredSubtitle {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+
+        .centeredImage {
+            display: block;
+            margin: 0 auto 40px; 
+            width: 600px; 
+            height: auto;
+        }
+
+         footer {
+            background-color: #063d6e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footerContent {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .footerContent p {
+            margin-bottom: 10px;
+        }
+
+        .footerCompact {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .footerCompact img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .footerLink {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footerLink:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logoContainer">
+            <img src="Imagen/logo.png" alt="Logo" class="logoImg">
+            <div class="logoText">
+                <span>VALLE</span><br>
+                <span>GRANDE</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="roundedButton">NOSOTROS</button>
+            <button class="roundedButton">HISTORIA</button>
+            <button class="roundedButton">VIDEO</button>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-image"></div>
+        <div class="left-block"></div>
+        <div class="right-block"></div>
+        <div class="mainTitle">
+            Bienvenidos a Valle Grande
+        </div>
+    </div>
+
+    <div class="contentSection">
+        <div class="subtitle">Quiénes somos</div>
+        <p class="parrafo">
+            Valle Grande es actualmente un Centro de Educación Superior constituido por la Promotora de Obras Sociales y de Instrucción Popular (PROSIP) el 25 de febrero de 1965, reconocido por el Ministerio de Agricultura mediante Resolución Directoral N° 04383-AG-DGAG del 2 de junio de 1983 y por el Ministerio de Educación mediante Resolución Ministerial N°0751-92-ED.
+        </p>
+
+        <div class="subtitle">Desarrollo histórico</div>
+        <div class="ImageButtonContainer">
+            <p class="parrafo" style="flex: 1;">
+                Han transcurrido casi 50 años de trabajo y continuamos con el mismo deseo, seguir contribuyendo con el bienestar de las familias de Cañete y Yauyos.
+            </p>
+            <img src="https://vallegrande.edu.pe/wp-content/uploads/2023/04/12.jpeg" alt="Imagen al lado" class="sideImage">
+            <div class="buttonContainer">
+                <button class="roundedButton2">Haz clic aquí</button>
+            </div>
+        </div>
+
+        <div class="subtitle">Misión y Visión</div>
+        <div class="subtopic-container">
+            <div class="subtopic">
+                <h3>Misión</h3>
+                <p class="parrafo">
+                    Formar personas en el ámbito técnico profesional, considerando el sentido trascendente del hombre, desarrollando en ellos competencias, que faciliten su inserción laboral, contribuyendo de esta manera al desarrollo del país.
+                </p>
+            </div>
+            <div class="subtopic">
+                <h3>Visión</h3>
+                <p class="parrafo">
+                    Ser una institución referente de excelencia de  la educación técnico profesional del Perú, asociada al sector productivo.
+                </p>
+            </div>
+        </div>
+        <a href="https://www.vallegrande.edu.pe/images/organigrama2.jpg" class="linkSubtitle">ORGANIGRAMA</a>
+        <div class="centeredSubtitle">Visita nuestro canal de Youtube</div>
+        <a href="https://www.youtube.com/@vallegrande_" target="_blank">
+            <img src="/Imagen/horizontal.png" alt="Imagen centrada" class="centeredImage">
+        </a>
+    </div>
+    <footer>
+        <div class="footerContent">
+            <p>Contacto</p>
+            <p>RUC: 20120099095</p>
+            <p>Razón Social: I.E.S.T.P. Valle Grande</p>
+            <p>Ant. Panamericana Sur: Km. 144, San Vicente de Cañete, Lima, Perú. Apartado Postal 70.</p>
+            <div class="footerCompact">
+                <img src="Imagen/telefono.png" alt="Teléfono"> 
+                <span>(01) 581-2261</span>
+            </div>
+            <div class="footerCompact">
+                <img src="Imagen/correo.png" alt="Email">
+                <a href="mailto:informes@vallegrande.edu.pe" class="footerLink">informes@vallegrande.edu.pe</a>
+            </div>
+            <a href="https://www.vallegrande.edu.pe" class="footerLink">www.vallegrande.edu.pe</a>
+        </div>
+    </footer>
+</body>
+</html>
